@@ -15,13 +15,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
+        <!--android:text="0166772792"-->
+        <!--android:text="1234"-->
+
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtPhone"
             android:hint="Phone Number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/white"
-            android:text="0166772792"
             android:textColor="@android:color/white"
             android:textSize="34sp"
             android:inputType="phone"
@@ -38,7 +41,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/white"
-            android:text="1234"
             android:textColor="@android:color/white"
             android:textSize="34sp"
             android:inputType="textPassword"

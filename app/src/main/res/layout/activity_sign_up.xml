@@ -7,6 +7,10 @@
     android:background="@drawable/background_dev"
     tools:context=".SignUp">
 
+    <!--android:text="01766777357"-->
+    <!--android:text="Tom Cruise"-->
+    <!--android:text="1234"-->
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_marginLeft="8dp"
@@ -21,7 +25,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/white"
-            android:text="01766777357"
             android:textColor="@android:color/white"
             android:textSize="34sp"
             android:inputType="phone"
@@ -38,7 +41,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/white"
-            android:text="Tom Cruise"
             android:textColor="@android:color/white"
             android:textSize="34sp"
             android:inputType="text"
@@ -55,7 +57,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/white"
-            android:text="1234"
             android:textColor="@android:color/white"
             android:textSize="34sp"
             android:inputType="textPassword"
