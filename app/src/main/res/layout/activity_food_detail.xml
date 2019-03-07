@@ -35,7 +35,7 @@
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
-                android:title="Food Name"
+                android:title="@string/food_name"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -88,7 +88,7 @@
                         android:id="@+id/food_name"
                         android:layout_marginTop="8dp"
                         android:padding="12dp"
-                        android:text="Food Name"
+                        android:text="@string/food_name"
                         android:textColor="@color/colorPrimary"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -106,11 +106,12 @@
                             android:src="@drawable/ic_attach_money_black_24dp"
                             android:layout_weight="1"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/todo" />
 
                         <TextView
                             android:id="@+id/food_price"
-                            android:text="1,000"
+                            android:text="@string/_1_000"
                             android:textColor="@color/colorPrimary"
                             android:textSize="18sp"
                             android:textStyle="bold"
@@ -125,13 +126,13 @@
                         android:id="@+id/number_button"
                         android:layout_width="100dp"
                         android:layout_height="44dp"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="18dp"
                         app:backGroundColor="@color/colorAccent"
                         app:finalNumber="20"
                         app:initialNumber="1"
-                        app:textSize="8sp">
+                        app:textSize="12sp">
 
                     </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
 
@@ -150,7 +151,7 @@
                     android:layout_marginTop="12dp"
                     android:lineSpacingMultiplier="1.5"
                     android:padding="12dp"
-                    android:text="Description"
+                    android:text="@string/description"
                     android:textColor="@android:color/black"
                     android:textSize="14sp"
                     android:layout_width="wrap_content"
