@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -33,7 +34,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:text="@string/total"
+                    android:text="Total: "
                     android:textSize="20sp"
                     android:textColor="@android:color/white"
                     android:layout_width="wrap_content"
@@ -41,7 +42,7 @@
 
                 <TextView
                     android:id="@+id/total"
-                    android:text="@string/_10_000"
+                    android:text="$10,000 "
                     android:textSize="24sp"
                     android:textColor="@android:color/white"
                     android:layout_width="wrap_content"

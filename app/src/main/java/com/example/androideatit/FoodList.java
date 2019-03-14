@@ -27,7 +27,7 @@ public class FoodList extends AppCompatActivity {
 
     String categoryId="";
 
-    FirebaseRecyclerAdapter<Food, FoodViewHolder> adapter;
+    FirebaseRecyclerAdapter<Food,FoodViewHolder> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,13 +72,13 @@ public class FoodList extends AppCompatActivity {
                     public void onClick(View view, int position, boolean isLongClick) {
                         //Start new Activity
                         Intent foodDetail = new Intent(FoodList.this, FoodDetail.class);
-                        foodDetail.putExtra("FoodId",adapter.getRef(position).getKey());
+                        foodDetail.putExtra("FoodId",adapter.getRef(position).getKey());  //Send Food Id to new activity
                         startActivity(foodDetail);
                     }
                 });
             }
         };
-
+        
         recyclerView.setAdapter(adapter);
     }
 }

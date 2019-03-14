@@ -58,16 +58,16 @@ public class CartAdapter extends RecyclerView.Adapter<CartViewHolder>{
     }
 
 
-
+    @NonNull
     @Override
-    public CartViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View itemView = inflater.inflate(R.layout.cart_layout,parent,false);
         return new CartViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder( CartViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CartViewHolder holder, int position) {
         TextDrawable drawable = TextDrawable.builder()
                 .buildRound(""+listData.get(position).getQuantity(), Color.RED);
         holder.img_cart_count.setImageDrawable(drawable);

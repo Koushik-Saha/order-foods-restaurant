@@ -24,22 +24,22 @@
 
             <TextView
                 android:id="@+id/cart_item_name"
-                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="center_vertical|start"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:text="@string/food_01"
+                android:text="Food 01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
 
             <TextView
                 android:id="@+id/cart_item_Price"
-                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="center_vertical|start"
                 android:textAllCaps="true"
                 android:textStyle="italic"
-                android:text="@string/_100_000"
+                android:text="100,000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -47,11 +47,10 @@
 
         <ImageView
             android:layout_gravity="center_vertical|end"
-            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:id="@+id/cart_item_count"
             android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:contentDescription="@string/todo" />
+            android:layout_height="20dp" />
 
     </LinearLayout>
 
