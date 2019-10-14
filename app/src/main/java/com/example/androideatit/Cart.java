@@ -61,8 +61,8 @@ public class Cart extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         txtTotalPrice = (TextView)findViewById(R.id.total);
-//        btnPlace = (FButton) findViewById(R.id.btnPlaceOrder);
-        btnPlace = (Button)findViewById(R.id.btnPlaceOrder);
+        btnPlace = (FButton) findViewById(R.id.btnPlaceOrder);
+//        btnPlace = (Button)findViewById(R.id.btnPlaceOrder);
 
         btnPlace.setOnClickListener(new View.OnClickListener() {
             @Override
