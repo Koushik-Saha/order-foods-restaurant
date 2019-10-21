@@ -92,7 +92,13 @@ public class Home extends AppCompatActivity
         layoutManager = new LinearLayoutManager(this);
         recycler_menu.setLayoutManager(layoutManager);
 
-        loadMenu();
+        if (Common.isConnectedToInternet(this))
+            loadMenu();
+        else
+        {
+            Toast.makeText(this, "Please Check your connection!!!", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
 
         //Register Service
@@ -144,6 +150,8 @@ public class Home extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.refresh)
+            loadMenu();
 
 
         return super.onOptionsItemSelected(item);

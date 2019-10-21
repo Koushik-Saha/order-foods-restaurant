@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.androideatit.Common.Common;
 import com.example.androideatit.Interface.ItemClickListener;
 import com.example.androideatit.Model.Food;
 import com.example.androideatit.ViewHolder.FoodViewHolder;
@@ -66,7 +67,13 @@ public class FoodList extends AppCompatActivity {
             categoryId = getIntent().getStringExtra("CategoryId");
         if (!categoryId.isEmpty() && categoryId != null)
         {
-            loadListFood(categoryId);
+            if (Common.isConnectedToInternet(getBaseContext()))
+                loadListFood(categoryId);
+            else
+            {
+                Toast.makeText(FoodList.this, "Please Check your connection!!!", Toast.LENGTH_SHORT).show();
+                return;
+            }
         }
 
 
@@ -180,10 +187,11 @@ public class FoodList extends AppCompatActivity {
     }
 
     private void loadListFood(String categoryId) {
-        adapter = new FirebaseRecyclerAdapter<Food, FoodViewHolder>(Food.class,
+        adapter = new FirebaseRecyclerAdapter<Food, FoodViewHolder>(
+                Food.class,
                 R.layout.food_item,
                 FoodViewHolder.class,
-                foodList.orderByChild("MenuId").equalTo(categoryId)  // like : Select * from Foods Where MenuId=
+                foodList.orderByChild("menuId").equalTo(categoryId)  // like : Select * from Foods Where MenuId=
                 ) {
             @Override
             protected void populateViewHolder(FoodViewHolder viewHolder, Food model, int position) {
@@ -203,7 +211,7 @@ public class FoodList extends AppCompatActivity {
                 });
             }
         };
-        
+
         recyclerView.setAdapter(adapter);
     }
 }
