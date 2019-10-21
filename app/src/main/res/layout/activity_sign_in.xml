@@ -53,16 +53,35 @@
 
 
 
-        <com.rey.material.widget.CheckBox
-            android:id="@+id/ckbRemember"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Material.Drawable.CheckBox"
-            android:text="Remember me"
-            android:gravity="center_vertical"
-            android:textColor="@android:color/white"
-            app:cbd_strokeColor="@android:color/white"
-            app:cbd_tickColor="@color/colorPrimaryDark" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.rey.material.widget.CheckBox
+                android:id="@+id/ckbRemember"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/Material.Drawable.CheckBox"
+                android:text="Remember me"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/white"
+                app:cbd_strokeColor="@android:color/white"
+                app:cbd_tickColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/txtForgotPwd"
+                android:textColor="@android:color/white"
+                android:text="@string/forgot_pwd"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
