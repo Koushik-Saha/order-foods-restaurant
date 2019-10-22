@@ -55,5 +55,7 @@ dependencies {
 
     implementation 'io.paperdb:paperdb:2.1'
     implementation 'com.github.rey5137:material:1.2.5'
+
+    implementation 'com.stepstone.apprating:app-rating:2.0.0'
 }
 apply plugin: 'com.google.gms.google-services'
